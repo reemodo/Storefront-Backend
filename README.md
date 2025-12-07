@@ -52,3 +52,24 @@ Add JWT functionality as shown in the course. Make sure that JWTs are required f
 Before submitting, make sure that your project is complete with a `README.md`. Your `README.md` must include instructions for setting up and running your project including how you setup, run, and connect to your database. 
 
 Before submitting your project, spin it up and test each endpoint. If each one responds with data that matches the data shapes from the `REQUIREMENTS.md`, it is ready for submission!
+# Storefront Backend
+This backend implements a simple storefront API using Node, Express and
+Postgres.
+## Quick start (with Docker)
+1. Copy `.env.example` to `.env` and update values.
+2. Start services:
+ ```bash
+docker compose up -d
+ ```
+3. Build and run migrations (inside backend container or locally):
+ ```bash
+cd backend
+yarn migrate
+ ```
+4. Start backend (local dev):
+ ```bash
+yarn dev
+ ```
+API root: `http://localhost:3000/api`
+## Endpoints
+See REQUIREMENTS.md for all endpoints and data shapes.
